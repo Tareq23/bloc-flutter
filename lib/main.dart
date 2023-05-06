@@ -1,7 +1,9 @@
 import 'package:blocpattern/counter_bloc.dart';
 import 'package:blocpattern/counter_event.dart';
+import 'package:blocpattern/features/home/bloc/home_bloc.dart';
 import 'package:blocpattern/features/home/ui/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApps());
@@ -18,7 +20,12 @@ class MyApps extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.teal
       ),
-      home: Home(),
+      home: MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (context) => HomeBloc(),),
+        ],
+        child: Home(),
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 
 
 import 'package:blocpattern/features/home/bloc/home_bloc.dart';
+import 'package:blocpattern/features/home/bloc/home_event.dart';
 import 'package:blocpattern/features/home/bloc/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,8 +36,14 @@ class _HomeState extends State<Home> {
             appBar: AppBar(
               title: Text('Grocery App'),
               actions: [
-                IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border),),
-                IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart),),
+                IconButton(onPressed: (){
+                  print('wish list ------------------------');
+                  // HomeBloc().add(HomeProductWishlistButtonEvent());
+                  HomeBloc().add(HomeProductWishlistNavigateEvent());
+                }, icon: Icon(Icons.favorite_border),),
+                IconButton(onPressed: (){
+                  HomeBloc().add(HomeProductCartNavigateEvent());
+                }, icon: Icon(Icons.shopping_cart),),
               ],
             ),
           );
