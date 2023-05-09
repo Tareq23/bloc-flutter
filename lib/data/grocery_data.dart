@@ -9,7 +9,7 @@ class GroceryData{
       "category": "Fruit",
       "price": 1.99,
       "quantity": 10,
-      "image": "https://example.com/apple.jpg",
+      "image": "https://media.istockphoto.com/id/1414216581/photo/red-apple-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=KBZnrstDuPe9Z-6dqAmGlW_B2xfuQFjf31F-LBBqc6g=",
       "description": "Fresh apples from local farms."
     },
     {

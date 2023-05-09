@@ -1,4 +1,5 @@
 
+import 'package:blocpattern/features/home/data_model/home_data_model.dart';
 import 'package:flutter/foundation.dart';
 
 @immutable
@@ -10,7 +11,11 @@ class HomeInitial extends HomeState{}
 
 class HomeLoadingState extends HomeState{}
 
-class HomeLoadedSuccessState extends HomeState{}
+class HomeLoadedSuccessState extends HomeState{
+  final List<ProductDataModel> products;
+
+  HomeLoadedSuccessState({required this.products});
+}
 
 class HomeErrorState extends HomeState{}
 
